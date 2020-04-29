@@ -1,5 +1,15 @@
 <html>
     <body>
-        <h1>Template is working</h1>
+        <h1>{{ title }} is working</h1>
+        {% for obj in object_list %}
+        <a href='{% url "detail" id=obj.id %}'>{{obj.title}}</a><br>
+        {{obj.content}}<br>
+        {{obj.timestamp}}<br>
+        {{obj.updated}}<br>
+        {{obj.id}}<br><br>
+
+
+        {% endfor %}
+
     </body>
 </html>
